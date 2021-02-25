@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Skeleton\Tests;
+namespace Pesakite\Mpesa\Tests;
 
 use PHPUnit\Framework\TestCase;
 

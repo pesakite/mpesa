@@ -1,16 +1,16 @@
 {
-    "name": ":vendor_name/:package_name",
-    "description": ":package_description",
+    "name": "pesakite/mpesa",
+    "description": "Comprehensive Mpesa PHP package",
     "keywords": [
-        ":vendor_name",
-        ":package_name"
+        "pesakite",
+        "Mpesa"
     ],
-    "homepage": "https://github.com/:vendor_name/:package_name",
+    "homepage": "https://github.com/pesakite/mpesa",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
+            "name": "Malik Mwamodo",
+            "email": "erick@mwamodo.com",
             "role": "Developer"
         }
     ],
@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src"
+            "Pesakite\\Mpesa\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Tests\\": "tests"
+            "Pesakite\\Mpesa\\Tests\\": "tests"
         }
     },
     "scripts": {
