@@ -4,6 +4,10 @@ namespace Pesakite\Mpesa;
 
 class Misc
 {
+    /**
+     * @param $phone
+     * @return mixed|string|string[]|null
+     */
     public static function formatPhoneNumber($phone)
     {
         $phone = (substr($phone, 0, 1) == "+") ? str_replace("+", "", $phone) : $phone;

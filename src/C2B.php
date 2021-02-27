@@ -4,6 +4,11 @@ namespace Pesakite\Mpesa;
 
 class C2B extends Service
 {
+    /**
+     * @param null $callback
+     * @param string $response_type
+     * @return false|mixed
+     */
     public static function register($callback = null, $response_type = "Completed")
     {
         $endpoint = (parent::$config->env == "live")
@@ -25,6 +30,15 @@ class C2B extends Service
             : \call_user_func_array($callback, [$result]);
     }
 
+    /**
+     * @param $phone
+     * @param int $amount
+     * @param string $reference
+     * @param string $description
+     * @param string $remark
+     * @param null $callback
+     * @return false|mixed
+     */
     public static function stk($phone, $amount = 100, $reference = "ACCOUNT", $description = "Transaction Description", $remark = "Remark", $callback = null)
     {
         $phone = Misc::formatPhoneNumber($phone);
@@ -59,6 +73,14 @@ class C2B extends Service
             : \call_user_func_array($callback, [$result]);
     }
 
+    /**
+     * @param null $phone
+     * @param int $amount
+     * @param string $reference
+     * @param string $command
+     * @param null $callback
+     * @return false|mixed
+     */
     public static function simulate($phone = null, $amount = 100, $reference = "TRX", $command = "CustomerPayBillOnline", $callback = null)
     {
         $phone = Misc::formatPhoneNumber($phone);

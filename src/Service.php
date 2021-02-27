@@ -4,8 +4,14 @@ namespace Pesakite\Mpesa;
 
 class Service
 {
+    /**
+     * @var object
+     */
     public static object $config;
 
+    /**
+     * @param $configs
+     */
     public static function init($configs)
     {
         $base = (isset($_SERVER["HTTPS"]) ? "https" : "http") . "://" . (isset($_SERVER["SERVER_NAME"]) ? $_SERVER["SERVER_NAME"] : '');
@@ -39,6 +45,11 @@ class Service
         self::$config = (object) $defaults;
     }
 
+    /**
+     * @param $endpoint
+     * @param null $credentials
+     * @return bool|string
+     */
     public static function remote_get($endpoint, $credentials = null)
     {
         $curl = curl_init();
@@ -51,6 +62,11 @@ class Service
         return curl_exec($curl);
     }
 
+    /**
+     * @param $endpoint
+     * @param array $data
+     * @return bool|string
+     */
     public static function remote_post($endpoint, $data = [])
     {
         $token = self::token();
@@ -73,6 +89,9 @@ class Service
         return curl_exec($curl);
     }
 
+    /**
+     * @return string
+     */
     public static function token(): string
     {
         $endpoint = (self::$config->env == "live")
