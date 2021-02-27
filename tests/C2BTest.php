@@ -13,4 +13,6 @@ class C2BTest extends TestCase
         $return = C2B::simulate();
         $this->assertEquals('Accept the service request successfully.', $return['ResponseDescription']);
     }
+
+    // TODO: test_stk
 }

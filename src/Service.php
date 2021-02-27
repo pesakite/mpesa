@@ -13,7 +13,7 @@ class Service
             "env" => "sandbox",
             "type" => 4,
             "shortcode" => "603021",
-            "headoffice" => "603021",
+            "headoffice" => "174379",
             "key" => "eHwhb4ywqThDSRwsdsaBRE3Y31uNk6jy",
             "secret" => "tK3RFHKKPlCxFZzi",
             "username" => "apiop37",
