@@ -4,6 +4,27 @@ namespace Pesakite\Mpesa;
 
 class C2B extends Service
 {
+    public static function register($callback = null, $response_type = "Completed")
+    {
+        $endpoint = (parent::$config->env == "live")
+            ? "https://api.safaricom.co.ke/mpesa/c2b/v1/registerurl"
+            : "https://sandbox.safaricom.co.ke/mpesa/c2b/v1/registerurl";
+
+        $curl_post_data = [
+            "ShortCode" => parent::$config->shortcode,
+            "ResponseType" => $response_type,
+            "ConfirmationURL" => parent::$config->confirmation_url,
+            "ValidationURL" => parent::$config->validation_url,
+        ];
+
+        $response = parent::remote_post($endpoint, $curl_post_data);
+        $result = json_decode($response, true);
+
+        return is_null($callback)
+            ? $result
+            : \call_user_func_array($callback, [$result]);
+    }
+
     public static function stk($phone, $amount = 100, $reference = "ACCOUNT", $description = "Transaction Description", $remark = "Remark", $callback = null)
     {
         $phone = Misc::formatPhoneNumber($phone);
