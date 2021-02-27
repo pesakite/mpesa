@@ -4,7 +4,6 @@ namespace Pesakite\Mpesa;
 
 class Misc
 {
-
     public static function formatPhoneNumber($phone)
     {
         $phone = (substr($phone, 0, 1) == "+") ? str_replace("+", "", $phone) : $phone;
@@ -13,5 +12,4 @@ class Misc
 
         return $phone;
     }
-
 }

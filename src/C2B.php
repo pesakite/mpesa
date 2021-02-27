@@ -6,7 +6,6 @@ class C2B extends Service
 {
     public static function simulate($phone = null, $amount = 100, $reference = "TRX", $command = "CustomerPayBillOnline", $callback = null)
     {
-
         $phone = Misc::formatPhoneNumber($phone);
         $phone = (parent::$config->env == "live") ? $phone : "254708374149";
 
