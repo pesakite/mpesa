@@ -4,15 +4,14 @@
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/pesakite/Mpesa/Tests?label=tests)](https://github.com/pesakite/Mpesa/actions?query=workflow%3ATests+branch%3Amaster)
 [![Total Downloads](https://img.shields.io/packagist/dt/pesakite/Mpesa.svg?style=flat-square)](https://packagist.org/packages/pesakite/Mpesa)
 
-
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
+This is where your description should go. Try to limit it to a paragraph or two. Consider adding a small example.
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require pesakite/Mpesa
+composer require pesakite/mpesa
 ```
 
 ## Usage

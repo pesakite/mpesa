@@ -1,5 +1,5 @@
 .idea
-.php_cs
+.php_cs.dist
 .php_cs.cache
 .phpunit.result.cache
 build
@@ -9,3 +9,4 @@ docs
 phpunit.xml
 psalm.xml
 vendor
+src/dummy.php
