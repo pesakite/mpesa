@@ -8,6 +8,7 @@ class C2B extends Service
      * @param null $callback
      * @param string $response_type
      * @return false|mixed
+     * @psalm-suppress InvalidScalarArgument
      */
     public static function register($callback = null, $response_type = "Completed")
     {
@@ -38,6 +39,7 @@ class C2B extends Service
      * @param string $remark
      * @param null $callback
      * @return false|mixed
+     * @psalm-suppress InvalidScalarArgument
      */
     public static function stk($phone, $amount = 100, $reference = "ACCOUNT", $description = "Transaction Description", $remark = "Remark", $callback = null)
     {
@@ -80,6 +82,7 @@ class C2B extends Service
      * @param string $command
      * @param null $callback
      * @return false|mixed
+     * @psalm-suppress InvalidScalarArgument
      */
     public static function simulate($phone = null, $amount = 100, $reference = "TRX", $command = "CustomerPayBillOnline", $callback = null)
     {

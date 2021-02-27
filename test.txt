@@ -1,6 +1,0 @@
-Array
-(
-    [requestId] => 90314-3894267-1
-    [errorCode] => 400.002.02
-    [errorMessage] => Bad Request - Invalid CallBackURL
-)

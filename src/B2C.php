@@ -13,6 +13,7 @@ class B2C extends Service
      * @param string $occassion
      * @param null $callback
      * @return false|mixed
+     * @psalm-suppress InvalidScalarArgument
      */
     public static function send($phone, $amount = 10, $command = "BusinessPayment", $remarks = "", $occassion = "", $callback = null)
     {

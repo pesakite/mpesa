@@ -11,6 +11,7 @@ class Service
 
     /**
      * @param $configs
+     * @psalm-suppress UnusedVariable
      */
     public static function init($configs)
     {
@@ -47,7 +48,7 @@ class Service
 
     /**
      * @param $endpoint
-     * @param null $credentials
+     * @param $credentials
      * @return bool|string
      */
     public static function remote_get($endpoint, $credentials = null)
@@ -91,6 +92,7 @@ class Service
 
     /**
      * @return string
+     * @psalm-suppress InvalidScalarArgument
      */
     public static function token(): string
     {
