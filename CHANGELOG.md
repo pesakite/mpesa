@@ -2,6 +2,8 @@
 
 All notable changes to `Mpesa` will be documented in this file.
 
-## 1.0.0 - 202X-XX-XX
+## 0.0.0 - 2021-02-28
 
-- initial release
+- can make b2c simulation
+- can use stk push
+- initial beta release
